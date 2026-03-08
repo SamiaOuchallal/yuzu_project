@@ -1,3 +1,4 @@
+
 function interface_main()
 
     global donnees_pretes theme_actuel;
@@ -75,10 +76,10 @@ function interface_main()
 
         % panel_page11 : Linéaire
 
-    xmin_field_li = uislider('Parent', panel_page11,'Position', [270 200 100 25], 'Limits', [1 1000], 'Value',1, 'ValueChangedFcn',@update_slider, 'FontColor',[0 0 0])
+    xmin_field_li = uislider('Parent', panel_page11,'Position', [270 200 100 25], 'Limits', [0 70], 'Value',1, 'ValueChangedFcn',@update_slider, 'FontColor',[0 0 0])
     xmin_field_li_label = uilabel(panel_page11,'Text', 'xmin = 0', 'Position', [200 190 80 25], 'FontColor', [0 0 0]);
 
-    xmax_field_li = uislider('Parent', panel_page11,'Position', [270 140 100 25], 'Limits', [1 1000], 'Value',1, 'ValueChangedFcn',@update_slider, 'FontColor',[0 0 0])
+    xmax_field_li = uislider('Parent', panel_page11,'Position', [270 140 100 25], 'Limits', [0 70], 'Value',1, 'ValueChangedFcn',@update_slider, 'FontColor',[0 0 0])
     xmax_field_li_label = uilabel(panel_page11,'Text', 'xmax = 0', 'Position', [200 130 80 25], 'FontColor', [0 0 0]);
 
     a_field_li = uislider('Parent', panel_page11,'Position', [470 200 100 25], 'Limits', [1 500], 'Value',1, 'ValueChangedFcn',@update_slider, 'FontColor',[0 0 0])
@@ -93,16 +94,16 @@ function interface_main()
 
         % panel_page12 : Logarithmique
 
-    xmin_field_lo = uislider('Parent', panel_page12,'Position', [270 200 100 25], 'Limits', [1 1000], 'Value',1, 'ValueChangedFcn',@update_slider, 'FontColor',[0 0 0])
+    xmin_field_lo = uislider('Parent', panel_page12,'Position', [270 200 100 25], 'Limits', [0 70], 'Value',1, 'ValueChangedFcn',@update_slider, 'FontColor',[0 0 0])
     xmin_field_lo_label = uilabel(panel_page12,'Text', 'xmin = 0', 'Position', [200 190 80 25], 'FontColor', [0 0 0]);
 
-    xmax_field_lo = uislider('Parent', panel_page12,'Position', [270 140 100 25], 'Limits', [1 1000], 'Value',1, 'ValueChangedFcn',@update_slider, 'FontColor',[0 0 0])
+    xmax_field_lo = uislider('Parent', panel_page12,'Position', [270 140 100 25], 'Limits', [0 70], 'Value',1, 'ValueChangedFcn',@update_slider, 'FontColor',[0 0 0])
     xmax_field_lo_label = uilabel(panel_page12,'Text', 'xmax = 0', 'Position', [200 130 80 25], 'FontColor', [0 0 0]);
 
     a_field_lo = uislider('Parent', panel_page12,'Position', [470 200 100 25], 'Limits', [1 500], 'Value',1, 'ValueChangedFcn',@update_slider, 'FontColor',[0 0 0])
     a_field_lo_label = uilabel(panel_page12,'Text', 'λ = 0', 'Position', [400 190 80 25], 'FontColor', [0 0 0]);
 
-    b_field_lo = uislider('Parent', panel_page12,'Position', [470 140 100 25], 'Limits', [1 500], 'Value',1, 'ValueChangedFcn',@update_slider, 'FontColor',[0 0 0])
+    b_field_lo = uislider('Parent', panel_page12,'Position', [470 140 100 25], 'Limits', [0 10], 'Value',1, 'ValueChangedFcn',@update_slider, 'FontColor',[0 0 0])
     b_field_lo_label = uilabel(panel_page12,'Text', 'μ = 0', 'Position', [400 130 80 25], 'FontColor', [0 0 0]);
 
 
@@ -112,16 +113,16 @@ function interface_main()
 
         % panel_page13 : Puissance
 
-    xmin_field_pu = uislider('Parent', panel_page13,'Position', [270 200 100 25], 'Limits', [1 1000], 'Value',1, 'ValueChangedFcn',@update_slider, 'FontColor',[0 0 0])
+    xmin_field_pu = uislider('Parent', panel_page13,'Position', [270 200 100 25], 'Limits', [0 70], 'Value',1, 'ValueChangedFcn',@update_slider, 'FontColor',[0 0 0])
     xmin_field_pu_label = uilabel(panel_page13,'Text', 'xmin = 0', 'Position', [200 190 80 25], 'FontColor', [0 0 0]);
 
-    xmax_field_pu = uislider('Parent', panel_page13,'Position', [270 140 100 25], 'Limits', [1 1000], 'Value',1, 'ValueChangedFcn',@update_slider, 'FontColor',[0 0 0])
+    xmax_field_pu = uislider('Parent', panel_page13,'Position', [270 140 100 25], 'Limits', [0 70], 'Value',1, 'ValueChangedFcn',@update_slider, 'FontColor',[0 0 0])
     xmax_field_pu_label = uilabel(panel_page13,'Text', 'xmax = 0', 'Position',[200 130 80 25], 'FontColor', [0 0 0]);
 
     a_field_pu = uislider('Parent', panel_page13,'Position', [470 200 100 25], 'Limits', [1 500], 'Value',1, 'ValueChangedFcn',@update_slider, 'FontColor',[0 0 0])
     a_field_pu_label = uilabel(panel_page13,'Text', 'λ = 0', 'Position', [400 190 80 25], 'FontColor', [0 0 0]);
 
-    b_field_pu = uislider('Parent', panel_page13,'Position', [470 140 100 25], 'Limits', [1 500], 'Value',1, 'ValueChangedFcn',@update_slider, 'FontColor',[0 0 0])
+    b_field_pu = uislider('Parent', panel_page13,'Position', [470 140 100 25], 'Limits', [0 10], 'Value',1, 'ValueChangedFcn',@update_slider, 'FontColor',[0 0 0])
     b_field_pu_label = uilabel(panel_page13,'Text', 'μ = 0', 'Position', [400 130 80 25], 'FontColor', [0 0 0]);
 
 
@@ -131,16 +132,16 @@ function interface_main()
 
         % panel_page14 : Exponentielle
 
-    xmin_field_ex = uislider('Parent', panel_page14,'Position', [270 200 100 25], 'Limits', [1 1000], 'Value',1, 'ValueChangedFcn',@update_slider, 'FontColor',[0 0 0])
+    xmin_field_ex = uislider('Parent', panel_page14,'Position', [270 200 100 25], 'Limits', [0 70], 'Value',1, 'ValueChangedFcn',@update_slider, 'FontColor',[0 0 0])
     xmin_field_ex_label = uilabel(panel_page14,'Text', 'xmin = 0', 'Position', [200 190 80 25], 'FontColor', [0 0 0]);
 
-    xmax_field_ex = uislider('Parent', panel_page14,'Position', [270 140 100 25], 'Limits', [1 1000], 'Value',1, 'ValueChangedFcn',@update_slider, 'FontColor',[0 0 0])
+    xmax_field_ex = uislider('Parent', panel_page14,'Position', [270 140 100 25], 'Limits', [0 70], 'Value',1, 'ValueChangedFcn',@update_slider, 'FontColor',[0 0 0])
     xmax_field_ex_label = uilabel(panel_page14,'Text', 'xmax = 0', 'Position', [200 130 80 25], 'FontColor', [0 0 0]);
 
     a_field_ex = uislider('Parent', panel_page14,'Position', [470 200 100 25], 'Limits', [1 500], 'Value',1, 'ValueChangedFcn',@update_slider, 'FontColor',[0 0 0])
     a_field_ex_label = uilabel(panel_page14,'Text', 'λ = 0', 'Position',[400 190 80 25], 'FontColor', [0 0 0]);
 
-    b_field_ex = uislider('Parent', panel_page14,'Position', [470 140 100 25], 'Limits', [1 500], 'Value',1, 'ValueChangedFcn',@update_slider, 'FontColor',[0 0 0])
+    b_field_ex = uislider('Parent', panel_page14,'Position', [470 140 100 25], 'Limits', [0 10], 'Value',1, 'ValueChangedFcn',@update_slider, 'FontColor',[0 0 0])
     b_field_ex_label = uilabel(panel_page14,'Text', 'μ = 0', 'Position', [400 130 80 25], 'FontColor', [0 0 0]);
 
 
